@@ -11,7 +11,7 @@ import 'dotenv/config'
 const app = express()
 
 async function main() {
-    
+
     await mongoose.connect(process.env.MONGODB_URL);
 
 }
@@ -27,7 +27,7 @@ app.use('/posts', postRouter)
 const dirname = path.resolve()
 app.use(express.static(path.join(dirname,'uploads')))
 
-const port = process.env.MONGODB_URL || 3000
+const port = process.env.PORT || 3000
 app.listen(port,() => {
     console.log(`Listening on port ${port}`)
 })

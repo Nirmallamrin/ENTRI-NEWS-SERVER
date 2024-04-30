@@ -1,6 +1,7 @@
 import User from "../Models/userModel.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import 'dotenv/config';
 
 const addUser = async (req,res) =>{
 
