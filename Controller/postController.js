@@ -14,7 +14,7 @@ const addPost = async (req,res) => {
         }
         var post = new Post(postItem)
         await post.save();
-        post.imageUrl = `http://localhost:3000/uploads/${post.id}`
+        post.imageUrl = `https://entri-news-server.onrender.com/uploads/${post.id}`;
         await post.save()
         res.status(201).json(postItem)
         

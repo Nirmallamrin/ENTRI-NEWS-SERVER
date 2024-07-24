@@ -69,7 +69,7 @@ const getUsers = async (req,res) => {
         if(!users){
             res.status(404).json({error:'Users not found'})
         }
-        res.status(200).json(users)
+        res.status(200).json({users})
     } catch(error) {
       console.log(error)
       res.status(500).json({error:'Internal server error'})
